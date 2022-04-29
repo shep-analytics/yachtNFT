@@ -72,6 +72,15 @@ module.exports = {
     // deploymentPollingInterval: - duration between checks for completion of deployment transactions
     // disableConfirmationListener: - true to disable web3's confirmation listener
 
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, `wss://rinkeby.infura.io/ws/v3/ab60e305634948b8bae6ee78a45a166f`),
+      network_id: 4, // Ropsten's id
+      //gas: 5500000,        // Ropsten has a lower block limit than mainnet
+      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+    },
+
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port

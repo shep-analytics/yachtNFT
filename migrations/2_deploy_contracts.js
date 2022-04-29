@@ -1,5 +1,5 @@
-const DogeBall = artifacts.require("DogeBall");
+const Lazy8YachtClub = artifacts.require("Lazy8YachtClub");
 
 module.exports = function(deployer) {
-  deployer.deploy(DogeBall);
+  deployer.deploy(Lazy8YachtClub);
 };
